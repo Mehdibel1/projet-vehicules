@@ -1,0 +1,14 @@
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class TestGarage {
+    @Test
+    void testAjouterVehicule() {
+        Garage garage = new Garage();
+        Voiture voiture = new Voiture("Toyota", "Corolla", 4);
+
+        garage.ajouterVehicule(voiture);
+
+        assertEquals(1, garage.compterVehicules(), "Le garage devrait contenir 1 véhicule.");
+    }
+}
